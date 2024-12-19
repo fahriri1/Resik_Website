@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Resik</title>
+</head>
+<body>
+    <div class="header">
+        <img id="logo" src="{{ url_for('static', filename='asset/logo_VBIN.png') }}">
+        <h2>Ground Control System</h2>
+        <form>
+            <input type="text" id="link" name="link" placeholder="Link Lokal" required>
+            <input type="text" id="port" name="port" placeholder="Port Lokal" required>
+            <button class="submit">
+                <img id="icon" src="{{ url_for('static', filename='asset/search_icon.png') }}">
+            </button>
+        </form>
+    </div>
+    <div id="background">
+        <div class="dashboard_data">
+            <h3>Dashboard data</h3>
+            <div class="div_label">
+                <p class="label" id="lab_accX">Accelerometer X :  <span id="accX">-8.00</span></p>
+                <p class="label" id="lab_accY">Accelerometer Y :  <span id="accY">-8.00</span></p>
+                <p class="label" id="lab_yaw">Yaw :  <span id="yaw">-8.00</span></p>
+                <p class="label" id="lab_EA">Euler Angle: <span id="EA">-8.00</span></p>
+                <p class="label" id="lab_RPM1">RPM Motor 1: <span id="RPM1">-8.00</span></p>
+                <p class="label" id="lab_RPM2">RPM Motor 2: <span id="RPM2">-8.00</span></p>
+                <p class="label" id="lab_speed">Speed: <span id="speed">-8.00</span></p>
+            </div>
+        </div>
+        <div class="position_data">
+            <h3>Position data</h3>
+            <div class="div_label">
+                <p class="label" id="lab_posX">Position X :  <span id="posX">-8.00</span></p>
+                <p class="label" id="lab_posY">Position Y :  <span id="posY">-8.00</span></p>
+                <p class="label" id="lab_angle">Angle :  <span id="angle">-8.00</span></p>
+            </div>
+        </div>
+        <div class="delivery_process">
+            <h3>Delivery process</h3>
+            <img src="{{ url_for('static', filename='asset/proses_0.png') }}">
+        </div>
+        <script>
+            document.addEventListener('keydown', function(event) {
+              const command = event.key; // Captures the key pressed
+              fetch('http://192.168.227.144:5000/control', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: command })
+              }).then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+    </div>
+</body>
+</html>

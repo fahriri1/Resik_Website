@@ -1,0 +1,154 @@
+body{
+    font-family: 'Poppins';
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.header{
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 14%;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+h2{
+    position: absolute;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0;
+    top: 25px;
+    left: 130px;
+}
+
+#logo{
+    position: absolute;
+    width: 106px;
+    height: 88px;
+}
+
+#link{
+    position: absolute;
+    width: 250px;
+    top: 25px;
+    left: 550px;
+    padding: 10px;
+}
+
+#port{
+    position: absolute;
+    width: 200px;
+    top: 25px;
+    padding: 10px;
+    left: 850px;
+}
+
+.submit{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #A8D03C;
+    border: none;
+    border-radius: 30px;
+    left: 1150px;
+    top: 20px;
+}
+
+.submit:hover {
+    background-color: #6e8825;
+}
+
+#icon{
+    width: 40px;
+    height: 40px;
+}
+
+#background{
+    position: absolute;
+    top: 15%;
+    width: 100vw;
+    height: 520px;
+    margin: 0;
+    background-color: #38B6FF;
+    overflow: hidden;
+    opacity: 0.65;
+}
+
+.dashboard_data{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 15px;
+    width: 450px;
+    height: 450px;
+}
+
+h3{
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    left: 150px;
+    color: black;
+    font-weight: 600;
+}
+
+.div_label{
+    position: absolute;
+    top: 55px;
+}
+
+.label{
+    padding: 10px;
+    border: 2px solid rgb(161, 157, 157);
+    border-radius: 10px;
+    width: 400px;
+    font-size: 12px;
+}
+
+.position_data{
+    position: absolute;
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 15px;
+    width: 700px;
+    height: 230px;
+    left: 550px;
+    top: 30px;
+}
+
+.position_data h3{
+    left: 300px;
+}
+
+.position_data .label{
+    width: 650px;
+}
+
+.delivery_process{
+    position: absolute;
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 15px;
+    width: 700px;
+    height: 180px;
+    left: 550px;
+    top: 300px;       
+}
+
+.delivery_process h3{
+    left: 280px;
+}
+
+.delivery_process img{
+    position: absolute;
+    left: 40px;
+    top: 55px;
+}
